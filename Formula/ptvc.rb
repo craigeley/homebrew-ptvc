@@ -7,7 +7,7 @@ class Ptvc < Formula
   sha256 "5828714089308564bd489718f2c6764d271f1228695db750b093bca5d03b3e91"
   license "MIT"
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   resource "grpcio" do
     url "https://files.pythonhosted.org/packages/source/g/grpcio/grpcio-1.78.0.tar.gz"
