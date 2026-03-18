@@ -3,8 +3,8 @@ class Ptvc < Formula
 
   desc "Pro Tools Version Control — versioned snapshots of Pro Tools sessions via PTSL"
   homepage "https://github.com/craigeley/ptvc"
-  url "https://github.com/craigeley/ptvc/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "5c013c476368a40dcc428f1d38650b9754c2811f8956d7a6bb88bbcc191c4788"
+  url "https://github.com/craigeley/ptvc/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "4daffd948cb5c17f5c2309a6cc138d9c5ab15e5106cc65578c96239dfe54d6eb"
   license "MIT"
 
   depends_on "python@3.13"
