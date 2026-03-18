@@ -3,11 +3,16 @@ class Ptvc < Formula
 
   desc "Pro Tools Version Control — versioned snapshots of Pro Tools sessions via PTSL"
   homepage "https://github.com/craigeley/ptvc"
-  url "https://github.com/craigeley/ptvc/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "de0d8ac7d125ea067c010b87e0947dd3e7a9eae55edd79711007d8ce76e4e338"
+  url "https://github.com/craigeley/ptvc/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "ba8d1aa82ec19407219c6053d8a8dc0118916e9ae46c97291bc611d1453db470"
   license "MIT"
 
   depends_on "python@3.13"
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
+    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
+  end
 
   resource "protobuf" do
     url "https://files.pythonhosted.org/packages/ba/25/7c72c307aafc96fa87062aa6291d9f7c94836e43214d43722e86037aac02/protobuf-6.33.5.tar.gz"
@@ -47,6 +52,6 @@ class Ptvc < Formula
   test do
     # ptvc requires Pro Tools to be running, so just verify the CLI loads
     assert_match "usage: ptvc", shell_output("#{bin}/ptvc --help")
-    assert_match "ptvc 0.4.1", shell_output("#{bin}/ptvc --version")
+    assert_match "ptvc 0.5.0", shell_output("#{bin}/ptvc --version")
   end
 end
