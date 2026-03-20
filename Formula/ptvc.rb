@@ -3,8 +3,8 @@ class Ptvc < Formula
 
   desc "Pro Tools Version Control — versioned snapshots of Pro Tools sessions via PTSL"
   homepage "https://github.com/craigeley/ptvc"
-  url "https://github.com/craigeley/ptvc/archive/refs/tags/v0.5.2.tar.gz"
-  sha256 "58dfa48dfe2b48961d1ba4b2b5e7b24e79c83608607ab302dbd2e3ff3b4f592c"
+  url "https://github.com/craigeley/ptvc/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "319659cdfb71d08a7a81ec37ed9a004d1233afb2876d5b233ce13003b978126c"
   license "MIT"
 
   depends_on "python@3.13"
@@ -52,6 +52,6 @@ class Ptvc < Formula
   test do
     # ptvc requires Pro Tools to be running, so just verify the CLI loads
     assert_match "usage: ptvc", shell_output("#{bin}/ptvc --help")
-    assert_match "ptvc 0.5.2", shell_output("#{bin}/ptvc --version")
+    assert_match "ptvc 0.6.0", shell_output("#{bin}/ptvc --version")
   end
 end
